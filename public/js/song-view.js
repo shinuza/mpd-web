@@ -9,15 +9,24 @@
     template: _.template('<%= Artist %> - <%= Title %>'),
 
     initialize: function initialize() {
-      this.$title = $('title');
+      this.$documentTitle = $('title');
+      this.$title = this.$('.title');
+      this.$album = this.$('.album');
+      this.$artist = this.$('.artist');
 
       this.model.on('change', this.render, this);
     },
 
-    render: function render(model) {
+    setTitle: function setTitle() {
       var text = this.template(model.attributes);
-      this.$el.html(text);
-      this.$title.html(text);
+      this.$documentTitle(text);
+    },
+
+    render: function render(model) {
+      this.$title.html(model.get('Title'));
+      this.$artist.html(model.get('Artist'));
+      this.$album.html(model.get('Album'));
+
     }
 
   });

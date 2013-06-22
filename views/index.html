@@ -7,28 +7,29 @@
     <link rel='stylesheet' href='/stylesheets/simple-slider.css' />
   </head>
   <body>
-    <h1 class="song"></h1>
-    <p></p>
+    <div class="player">
+      <div class="song">
+        <div class="title"></div>
+        <div class="infos">
+          <span class="artist"></span> - <span class="album"></span>
+        </div>
+      </div>
 
-    <ul class="controls">
-        <li>
-          <i class="previous icon-step-backward"></i>
-        </li>
-        <li>
-          <i class="playback icon-play"></i>
-        </li>
-        <li>
-          <i class="stop icon-stop"></i>
-        </li>
-        <li>
-          <i class="next icon-step-forward"></i>
-        </li>
-    </ul>
+      <div class="progress clearfix">
+        <input class="progress-bar" data-slider="true" data-slider-highlight="true">
 
-    <div class="progress clearfix">
-      <div class="progress-elapsed"></div>
-      <input class="progress-bar" data-slider="true" data-slider-highlight="true">
-      <div class="progress-time"></div>
+        <div class="txtC">
+          <ul class="controls">
+            <li><i class="previous icon-fast-backward"></i></li>
+            <li><i class="playback icon-play"></i></li>
+            <li><i class="next icon-fast-forward"></i></li>
+            <li><i class="stop icon-stop"></i></li>
+          </ul>
+          <span class="progress-text">
+            <span class="progress-elapsed"></span> / <span class="progress-time"></span>
+          </span>
+        </div>
+      </div>
     </div>
 
   <script type="text/javascript" src="/js/lib/jquery-1.10.1.js"></script>

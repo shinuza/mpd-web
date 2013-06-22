@@ -1,20 +1,38 @@
 body { padding: 0; font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
 a { color: #00B7FF;}
 
+ul { padding: 0; margin: 0; }
 
+.txtC { text-align: center; }
 .clearfix:after { content:" "; display:table; clear:both;}
 .pull-left { float: left; }
 .pull-right { float: right;}
 
+
+/* PLAYER */
+.player {position: fixed; bottom: 25px; width: 100%; }
+/* END PLAYER */
+
 /* PROGRESS BAR */
 .progress-bar > div { display: inline-block; }
-
 .progress-time { width: 3%; }
 .progress-elapsed { width: 3%; }
-.progress-wrapper { width: 90%; background: #ccc; vertical-align: middle; margin: 0 5px; }
-.progress-wrapper, .progress-line { height: 2px; }
-.progress-line { background: #00B7FF; width: 0; }
+.progress-text { font-size: 160%; margin-left: 50px;  }
+
+.slider { width: 97%; }
+.slider > .dragger { background: #faa94d; border-radius: 10px; width: 16px; height: 16px; }
+.slider > .track, .slider > .highlight-track { background: #ccc; height: 4px; }
+.slider > .highlight-track { background: #faa94d; }
 /* END PROGRESS BAR */
 
-.controls { display: inline-block; }
-.controls li { display: inline; cursor: pointer; }
+/* CONTROLS */
+.controls { display: inline-block; font-size: 200%; color: #666; vertical-align: sub; }
+.controls li { display: inline-block; cursor: pointer; min-width: 35px; text-align: center; }
+.controls li:hover { background: #eee; }
+.controls .playback { font-size: 150%; }
+/* END CONTROLS */
+
+/* SONG */
+.song {color: #aaa; }
+.song .title { color: black; font-size: 150%; }
+/* END SONG */
