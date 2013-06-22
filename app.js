@@ -55,6 +55,16 @@ app.get('/currentsong', function(req, res, next) {
   });
 });
 
+app.get('/playlist', function(req, res, next) {
+  client.playlist(function(err, playlist) {
+    if(err) {
+      next(err);
+    } else {
+      res.json(playlist);
+    }
+  });
+});
+
 app.post('/play', function(req, res, next) {
   client.play(function(err) {
     if(err) {
@@ -117,6 +127,7 @@ app.post('/seekcur', function(req, res, next) {
 
 client.on('ready', function() {
   var server = http.createServer(app);
+
   server.listen(app.get('port'), function(){
     console.log('Express server listening on port ' + app.get('port'));
   });
@@ -125,7 +136,6 @@ client.on('ready', function() {
   wss.on('connection', function(ws) {
 
     var command = ws.upgradeReq.url.replace('/', '');
-
     var id = setInterval(function() {
       client[command](function(err, data) {
         ws.send(JSON.stringify(data));
