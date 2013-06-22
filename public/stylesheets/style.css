@@ -1,0 +1,20 @@
+body { padding: 0; font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+a { color: #00B7FF;}
+
+
+.clearfix:after { content:" "; display:table; clear:both;}
+.pull-left { float: left; }
+.pull-right { float: right;}
+
+/* PROGRESS BAR */
+.progress-bar > div { display: inline-block; }
+
+.progress-time { width: 3%; }
+.progress-elapsed { width: 3%; }
+.progress-wrapper { width: 90%; background: #ccc; vertical-align: middle; margin: 0 5px; }
+.progress-wrapper, .progress-line { height: 2px; }
+.progress-line { background: #00B7FF; width: 0; }
+/* END PROGRESS BAR */
+
+.controls { display: inline-block; }
+.controls li { display: inline; cursor: pointer; }
