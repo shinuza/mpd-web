@@ -7,16 +7,30 @@
     <link rel='stylesheet' href='/stylesheets/simple-slider.css' />
   </head>
   <body>
-    <div class="player">
-      <div class="song">
-        <div class="title"></div>
-        <div class="infos">
-          <span class="artist"></span> - <span class="album"></span>
-        </div>
-      </div>
+    <table class="playlist">
+      <thead>
+        <tr>
+          <th>Track N˚</th>
+          <th>Title</th>
+          <th>Duration</th>
+          <th>Artist</th>
+        </tr>
+      </thead>
+      <tbody>
 
+      </tbody>
+    </table>
+
+    <div class="player">
       <div class="progress clearfix">
         <input class="progress-bar" data-slider="true" data-slider-highlight="true">
+
+        <div class="song">
+          <div class="title"></div>
+          <div class="infos">
+            <span class="artist"></span> - <span class="album"></span>
+          </div>
+        </div>
 
         <div class="txtC">
           <ul class="controls">
@@ -45,6 +59,8 @@
 
   <script type="text/javascript" src="/js/progress-view.js"></script>
 
+  <script type="text/javascript" src="/js/playlist-collection.js"></script>
+  <script type="text/javascript" src="/js/playlist-view.js"></script>
 
   <script type="text/javascript" src="/js/app.js"></script>
   </body>

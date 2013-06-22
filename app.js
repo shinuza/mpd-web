@@ -125,6 +125,10 @@ app.post('/seekcur', function(req, res, next) {
   });
 });
 
+client.on('system', function() {
+  console.log(arguments)
+})
+
 client.on('ready', function() {
   var server = http.createServer(app);
 

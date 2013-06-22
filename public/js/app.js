@@ -27,4 +27,7 @@ new App.SongView({model: songModel});
 var statusModel = new App.StatusModel;
 new App.ControlsView({model: statusModel});
 
-var progressView = new App.ProgressView({songModel: songModel, statusModel: statusModel});
+new App.ProgressView({songModel: songModel, statusModel: statusModel});
+
+var playlistCollection = new App.PlaylistCollection;
+new App.PlaylistView({collection: playlistCollection});
