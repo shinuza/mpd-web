@@ -13,13 +13,9 @@
       });
     },
 
-    toInt: function toInt(number) {
-      return parseInt(number, 10);
-    },
-
     getTime: function getTime(ratio) {
       var time = this.get('Time');
-      return this.toInt(ratio ? ratio * time : time);
+      return toInt(ratio ? ratio * time : time);
     }
 
   });
