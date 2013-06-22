@@ -5,7 +5,7 @@ function pad(nb) {
   return nb;
 }
 
-function parseText(time) {
+function parseTime(time) {
   if(!time) {
     return '--:--';
   }

@@ -46,11 +46,11 @@
     },
 
     onElapsedChanged: function onElapsedChanged(model, elapsed) {
-      this.$elapsed.html(parseText(elapsed).join(':'));
+      this.$elapsed.html(parseTime(elapsed).join(':'));
     },
 
     onTimeChanged: function onTimeChanged(model, time) {
-      this.$time.html(parseText(time).join(':'));
+      this.$time.html(parseTime(time).join(':'));
     },
 
     setRatio: function setRatio(ratio) {
