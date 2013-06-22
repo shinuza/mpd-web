@@ -18,3 +18,7 @@
   height: 4px;
 }
 
+
+.slider > .highlight-track {
+    background: #faa94d;
+}

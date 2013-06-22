@@ -14,7 +14,6 @@
       this.$elapsed = this.$('.progress-elapsed');
       this.$time = this.$('.progress-time');
       this.$bar = this.$('.progress-bar');
-      this.$bar.simpleSlider();
 
       this.statusModel = options.statusModel;
       this.songModel = options.songModel;
