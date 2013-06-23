@@ -1,0 +1,154 @@
+file: John Legend/Get Lifted/01 - Prelude.flac
+Last-Modified: 2009-06-07T01:21:54Z
+Time: 45
+Album: Get lifted
+Artist: John Legend
+Date: 2004
+Genre: Soul
+Title: Prelude
+Track: 01
+Pos: 0
+Id: 30
+file: John Legend/Get Lifted/02 - Let's Get Lifted.flac
+Last-Modified: 2009-06-07T01:21:54Z
+Time: 218
+Album: Get lifted
+Artist: John Legend
+Date: 2004
+Genre: Soul
+Title: Let's get lifted
+Track: 02
+Pos: 1
+Id: 31
+file: John Legend/Get Lifted/03 - Used To Love U.flac
+Last-Modified: 2009-06-07T01:21:55Z
+Time: 211
+Album: Get lifted
+Artist: John Legend
+Date: 2004
+Genre: Soul
+Title: Used to love u
+Track: 03
+Pos: 2
+Id: 32
+file: John Legend/Get Lifted/04 - Alright.flac
+Last-Modified: 2009-06-07T01:21:55Z
+Time: 201
+Album: Get lifted
+Artist: John Legend
+Date: 2004
+Genre: Soul
+Title: Alright
+Track: 04
+Pos: 3
+Id: 33
+file: John Legend/Get Lifted/05 - She Don't Have To Know.flac
+Last-Modified: 2009-06-07T01:21:56Z
+Time: 293
+Album: Get lifted
+Artist: John Legend
+Date: 2004
+Genre: Soul
+Title: She don't have to know
+Track: 05
+Pos: 4
+Id: 34
+file: John Legend/Get Lifted/06 - Number One.flac
+Last-Modified: 2009-06-07T01:21:56Z
+Time: 199
+Album: Get lifted
+Artist: John Legend
+Date: 2004
+Genre: Soul
+Title: Number one
+Track: 06
+Pos: 5
+Id: 35
+file: John Legend/Get Lifted/07 - I Can Change.flac
+Last-Modified: 2009-06-07T01:21:57Z
+Time: 302
+Album: Get lifted
+Artist: John Legend
+Date: 2004
+Genre: Soul
+Title: I can change
+Track: 07
+Pos: 6
+Id: 36
+file: John Legend/Get Lifted/08 - Ordinary People.flac
+Last-Modified: 2009-06-07T01:21:57Z
+Time: 282
+Album: Get lifted
+Artist: John Legend
+Date: 2004
+Genre: Soul
+Title: Ordinary people
+Track: 08
+Pos: 7
+Id: 37
+file: John Legend/Get Lifted/09 - Stay With You.flac
+Last-Modified: 2009-06-07T01:21:58Z
+Time: 230
+Album: Get lifted
+Artist: John Legend
+Date: 2004
+Genre: Soul
+Title: Stay with you
+Track: 09
+Pos: 8
+Id: 38
+file: John Legend/Get Lifted/10 - Let's Get Lifted Again.flac
+Last-Modified: 2009-06-07T01:21:58Z
+Time: 139
+Album: Get lifted
+Artist: John Legend
+Date: 2004
+Genre: Soul
+Title: Let's get lifted again
+Track: 10
+Pos: 9
+Id: 39
+file: John Legend/Get Lifted/11 - So High.flac
+Last-Modified: 2009-06-07T01:21:58Z
+Time: 308
+Album: Get lifted
+Artist: John Legend
+Date: 2004
+Genre: Soul
+Title: So high
+Track: 11
+Pos: 10
+Id: 40
+file: John Legend/Get Lifted/12 - Refuge (When It's Cold Outside).flac
+Last-Modified: 2009-06-07T01:21:59Z
+Time: 254
+Album: Get lifted
+Artist: John Legend
+Date: 2004
+Genre: Soul
+Title: Refuge (when it's cold outside)
+Track: 12
+Pos: 11
+Id: 41
+file: John Legend/Get Lifted/13 - It Don't Have To Change.flac
+Last-Modified: 2009-06-07T01:21:59Z
+Time: 204
+Album: Get lifted
+Artist: John Legend
+Date: 2004
+Genre: Soul
+Title: It don't have to change
+Track: 13
+Pos: 12
+Id: 42
+file: John Legend/Get Lifted/14 - Live It Up.flac
+Last-Modified: 2009-06-07T01:22:00Z
+Time: 276
+Album: Get lifted
+Artist: John Legend
+Date: 2004
+Genre: Soul
+Title: Live it up
+Track: 14
+Pos: 13
+Id: 43
