@@ -9,7 +9,9 @@ var express = require('express')
   , path = require('path')
   , swig = require('swig')
   , ws = require('ws')
-  , client = require('./lib/client.js');
+  , client = require('./lib/client.js')
+  , parsing = require('./lib/parsing.js')
+  , routes = require('./lib/routes.js');
 
 var app = express();
 
@@ -31,124 +33,29 @@ if ('development' == app.get('env')) {
   swig.init({ cache: false });
 }
 
-app.get('/', function(req, res) {
-  res.render('index.html');
-});
-
-app.get('/status', function(req, res, next) {
-  client.status(function(err, status) {
-    if(err) {
-      next(err);
-    } else {
-      res.json(status);
-    }
-  });
-});
-
-app.get('/currentsong', function(req, res, next) {
-  client.currentsong(function(err, song) {
-    if(err) {
-      next(err);
-    } else {
-      res.json(song);
-    }
-  });
-});
-
-app.get('/playlist', function(req, res, next) {
-  client.playlist(function(err, playlist) {
-    if(err) {
-      next(err);
-    } else {
-      res.json(playlist);
-    }
-  });
-});
-
-app.post('/play', function(req, res, next) {
-  client.play(function(err) {
-    if(err) {
-      next(err);
-    } else {
-      res.json(202, {ok: true});
-    }
-  });
-});
-
-app.post('/pause', function(req, res, next) {
-  client.pause(req.body.pause, function(err) {
-    if(err) {
-      next(err);
-    } else {
-      res.json(202, {ok: true});
-    }
-  });
-});
-
-app.post('/stop', function (req, res, next) {
-  client.stop(function(err) {
-    if(err) {
-      next(err);
-    } else {
-      res.json(202, {ok: true});
-    }
-  });
-});
-
-app.post('/previous', function (req, res, next) {
-  client.previous(function(err) {
-    if(err) {
-      next(err);
-    } else {
-      res.json(202, {ok: true});
-    }
-  });
-});
-
-app.post('/next', function (req, res, next) {
-  client.next(function(err) {
-    if(err) {
-      next(err);
-    } else {
-      res.json(202, {ok: true});
-    }
-  });
-});
-
-app.post('/seekcur', function(req, res, next) {
-  client.seekcur(req.body.pos, function(err) {
-    if(err) {
-      next(err);
-    } else {
-      res.json(202, {ok: true});
-    }
-  });
-});
-
-client.on('system', function() {
-  console.log(arguments)
-})
+routes(app, client);
 
 client.on('ready', function() {
-  var server = http.createServer(app);
+  var server = http.createServer(app)
+    , wss = new ws.Server({server: server});
 
   server.listen(app.get('port'), function(){
     console.log('Express server listening on port ' + app.get('port'));
   });
 
-  var wss = new ws.Server({server: server});
   wss.on('connection', function(ws) {
-
-    var command = ws.upgradeReq.url.replace('/', '');
-    var id = setInterval(function() {
-      client[command](function(err, data) {
-        ws.send(JSON.stringify(data));
-      });
-    }, 500);
+    var command = ws.upgradeReq.url.replace('/', '')
+      , commandPolling = (function() {
+        client[command](function(err, data) {
+          ws.send(JSON.stringify(data));
+        });
+      })
+      , id = setInterval(commandPolling, 500);
 
     ws.on('close', function() {
       clearInterval(id);
     });
+
   });
 });
 
