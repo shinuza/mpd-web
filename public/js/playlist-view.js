@@ -6,8 +6,12 @@
 
     el: '.playlist',
 
+    events: {
+      'click tr': 'onSongClick'
+    },
+
     template: _.template(
-      '<tr>' +
+      '<tr data-id="<%= Id %>">' +
         '<td><%= Track %></td>' +
         '<td><%= Title %></td>' +
         '<td><%= parseTime(Time).join(\':\') %></td>' +
@@ -30,6 +34,15 @@
     renderAll: function renderAll(collection) {
       this.$body.empty();
       collection.each(this.render, this);
+    },
+
+    onSongClick: function onSongClick(e) {
+      var $el = $(e.currentTarget);
+      $.ajax({
+        type: 'post',
+        url: '/playid',
+        data: {id: $el.data('id')}
+      });
     }
 
   });
