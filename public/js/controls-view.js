@@ -9,6 +9,7 @@
     events: {
       'click .next': 'next',
       'click .previous': 'previous',
+      'click .stop': 'stop',
       'click .playback': 'playback'
     },
 
@@ -56,6 +57,14 @@
         data: {pause: pause}
       });
       this.model.set('state', state);
+    },
+
+    stop: function stop() {
+      $.ajax({
+        type: 'post',
+        url: '/stop',
+        data: {}
+      });
     },
 
     setState: function setState(state) {
