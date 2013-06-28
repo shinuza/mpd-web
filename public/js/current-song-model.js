@@ -2,7 +2,7 @@
 
   win.App = win.App || {};
 
-  App.SongModel = Backbone.Model.extend({
+  App.CurrentSongModel = Backbone.Model.extend({
 
     initialize: function initialize() {
       var self = this

@@ -21,13 +21,17 @@ function toInt(number) {
 }
 
 
-var songModel = new App.SongModel;
-new App.SongView({model: songModel});
+var currentSongModel = new App.CurrentSongModel;
+new App.CurrentSongView({model: currentSongModel});
 
 var statusModel = new App.StatusModel;
 new App.ControlsView({model: statusModel});
 
-new App.ProgressView({songModel: songModel, statusModel: statusModel});
+new App.ProgressView({songModel: currentSongModel, statusModel: statusModel});
 
 var playlistCollection = new App.PlaylistCollection;
 new App.PlaylistView({collection: playlistCollection});
+
+var songCollection = new App.SongCollection;
+
+songCollection.fetch();

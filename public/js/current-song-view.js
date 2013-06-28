@@ -2,7 +2,7 @@
 
   win.App = win.App || {};
 
-  App.SongView = Backbone.View.extend({
+  App.CurrentSongView = Backbone.View.extend({
 
     el: '.song',
 
