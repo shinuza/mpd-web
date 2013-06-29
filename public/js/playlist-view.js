@@ -2,7 +2,7 @@
 
   win.App = win.App || {};
 
-  App.PlaylistView = Backbone.View.extend({
+  App.PlaylistView = App.HiddeableView.extend({
 
     el: '.playlist',
 

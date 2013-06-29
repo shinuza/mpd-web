@@ -6,7 +6,23 @@
     <link rel='stylesheet' href='/stylesheets/font-awesome.css' />
   </head>
   <body>
-    <table class="playlist">
+    <p>
+      <a href="#playlist">Playlist</a>
+      <a href="#songs">Collection</a>
+    </p>
+    <div class="viewport">
+
+    </div>
+
+    <div class="groups hidden">
+      <button class="group" data-group="Artist">Group by artist</button>
+      <button class="group" data-group="Genre">Group by genre</button>
+      <button class="group" data-group="Album">Group by album</button>
+
+      <div class="list"></div>
+    </div>
+
+    <table class="playlist hidden">
       <thead>
         <tr>
           <th>Track N˚</th>
@@ -50,7 +66,10 @@
   <script type="text/javascript" src="/js/lib/underscore.js"></script>
   <script type="text/javascript" src="/js/lib/backbone.js"></script>
 
-  <script type="text/javascript" src="/js/song-collection.js"></script>
+  <script type="text/javascript" src="/js/hiddeable-view.js"></script>
+
+  <script type="text/javascript" src="/js/songs-collection.js"></script>
+  <script type="text/javascript" src="/js/songs-view.js"></script>
 
   <script type="text/javascript" src="/js/current-song-model.js"></script>
   <script type="text/javascript" src="/js/current-song-view.js"></script>
@@ -63,6 +82,9 @@
   <script type="text/javascript" src="/js/playlist-collection.js"></script>
   <script type="text/javascript" src="/js/playlist-view.js"></script>
 
+
+  <script type="text/javascript" src="/js/viewport.js"></script>
+  <script type="text/javascript" src="/js/router.js"></script>
   <script type="text/javascript" src="/js/app.js"></script>
   </body>
 </html>

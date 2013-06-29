@@ -30,8 +30,12 @@ new App.ControlsView({model: statusModel});
 new App.ProgressView({songModel: currentSongModel, statusModel: statusModel});
 
 var playlistCollection = new App.PlaylistCollection;
-new App.PlaylistView({collection: playlistCollection});
+App.playlistView = new App.PlaylistView({collection: playlistCollection});
 
-var songCollection = new App.SongCollection;
+var songsCollection = new App.SongsCollection;
+App.songsView = new App.SongsView({collection: songsCollection});
 
-songCollection.fetch();
+App.viewport = new App.ViewPort();
+var router = new App.Router();
+
+Backbone.history.start();
